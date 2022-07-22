@@ -197,7 +197,7 @@ class btree {
     }
 }
 
-public class bplus {
+public class b_tree {
     static int countno() throws FileNotFoundException, IOException {
         int no1;
         no1 = 0;
@@ -226,17 +226,14 @@ public class bplus {
     static String name, fee, spec, phone, count;
     static records[] recs = new records[100];
 
-    /**
-     * @param args the command line arguments
-     */
+
 
     public static void main(String[] args) throws IOException {
-        // TODO code application logic here
         String[] nodes = new String[100];
         btree b = new btree();
         int choice = 1, key = 1, no, rkey;
         no = countno();
-        System.out.println("No. of records: " + no + "\n");
+        System.out.println("No. of records: " + (no+1) + "\n");
         for (int i = 0; i < no; i++)
             recs[i] = new records();
         BufferedReader bbr = new BufferedReader(
